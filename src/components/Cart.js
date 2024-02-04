@@ -17,7 +17,7 @@ function Cart() {
           {plants[2]} : {prices[2]}€
         </li>
       </ul>
-      Total : {prices[0] + prices[1] + prices[2]}€
+      Total : {prices.reduce((a, b) => a + b, 0)}€
     </div>
   );
 }
