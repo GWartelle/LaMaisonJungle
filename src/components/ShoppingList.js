@@ -1,6 +1,6 @@
 import { plantList } from '../datas/plantList'
-import '../styles/ShoppingList.css'
 import PlantItem from './PlantItem'
+import '../styles/ShoppingList.css'
 
 function ShoppingList() {
 	const categories = plantList.reduce(
@@ -17,14 +17,14 @@ function ShoppingList() {
 				))}
 			</ul>
 			<ul className='lmj-plant-list'>
-				{plantList.map(({name, id, cover, water, light}) => (
-					<PlantItem 
-            name={name}
-            id={id}
-            cover={cover}
-            water={water}
-            light={light}
-          />
+				{plantList.map(({ id, cover, name, water, light }) => (
+					<PlantItem
+						key={id}
+						cover={cover}
+						name={name}
+						water={water}
+						light={light}
+					/>
 				))}
 			</ul>
 		</div>
